@@ -25,12 +25,54 @@ body {
   --accent-background-color: #f5f4fa;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.page-header {
+  background-color: #ccc;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   color: var(--title-text-color);
+  margin-right: 93px;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -47,7 +89,23 @@ ul {
 }
 
 /* site nav */
+
+.site-nav {
+  display: flex;
+}
+
 .site-nav .link {
+  margin-right: 50px;
+}
+
+.site-nav .item:last-child {
+  margin-right: 0;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -65,7 +123,16 @@ ul {
 }
 
 /* contact list */
-.contact a {
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.item .contact-link {
+  margin-left: 50px;
+}
+
+.item .contact-link {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -74,13 +141,15 @@ ul {
   text-decoration: none;
 }
 
-.contact a:hover,
-.contact a:focus {
+.item .contact-link:hover,
+.item .contact-link:focus {
   color: var(--accent-color);
 }
 
 /* hero */
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--accent-new-color);
   font-weight: 900;
   font-size: 44px;
@@ -96,16 +165,43 @@ ul {
 
 /* Button */
 .button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  width: 200px;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
   text-decoration: none;
 }
 
 /* feature */
+
+.features {
+  margin-top: 0;
+  background: #ffffff;
+  padding-bottom: 0;
+}
+
+.feature-list {
+  display: flex;
+}
+
+.feature-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .feature-list .title {
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -119,7 +215,24 @@ ul {
 }
 
 /* section */
+
+.work {
+  background: #ffffff;
+}
+.section-container {
+  display: flex;
+}
+
+.work-img {
+  margin-right: 30px;
+}
+
+.work-img:last-child {
+  margin-right: 0;
+}
+
 .section-title {
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -127,25 +240,64 @@ ul {
   text-align: center;
 }
 
-/* team */
-.team-list .title {
+/* our-team section */
+
+.our-team {
+  background: #f5f4fa;
+}
+
+.our-team-container {
+  display: flex;
+}
+
+.our-team-men {
+  background: #ffffff;
+  margin-right: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.our-team-men:last-child {
+  margin-right: 0;
+}
+
+.our-team-title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+
+.our-team-info {
+  padding: 30px 0;
+}
+
+.our-team-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
-.team-list .text {
+
+.our-team-job {
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   text-align: center;
-}
-.team {
-  background: #f5f4fa;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 /* footer */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: var(--primary-white-color);
   background-color: #2f303a;
   font-family: Roboto;
@@ -156,12 +308,16 @@ ul {
 }
 
 .footer .link {
+  display: inline-block;
+  margin-top: 9px;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
   color: var(--accent-background-color);
   font-family: Raleway;
   font-weight: 700;
@@ -191,7 +347,24 @@ ul {
 
 /* страница portfolio */
 
-.pagination-list .button {
+/* pagination-list */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  margin-bottom: 50px;
+}
+
+.pagination .button-wrapper:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination .button {
+  border: 0;
+  padding: 6px 22px;
   color: var(--title-text-color);
   background-color: var(--accent-background-color);
   font-family: Roboto;
@@ -201,9 +374,12 @@ ul {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
 }
 
-.pagination-list .button.primary {
+.pagination .button.primary {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--accent-new-color);
   background-color: var(--accent-color);
   font-family: Roboto;
@@ -214,16 +390,30 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.pagination-list .button:hover {
+.pagination .button:hover {
   background-color: var(--accent-color);
   color: var(--accent-new-color);
 }
 
+.project {
+  display: flex;
+  flex-wrap: wrap;
+}
+.element:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.element:not(:nth-last-child(-n + 3n)) {
+  margin-bottom: 30px;
+}
+
 .project .project-link {
   text-decoration: none;
+  display: block;
 }
 
 .project .project-title {
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -236,3 +426,19 @@ ul {
   font-size: 16px;
   line-height: 1.87;
 }
+
+.project .project-info {
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  padding: 20px 24px;
+}
+
+.element {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.element {
+  calc((100%-90px) /3);
+}
+
