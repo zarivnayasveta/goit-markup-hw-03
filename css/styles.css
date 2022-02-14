@@ -132,7 +132,7 @@ ul {
   margin-left: 50px;
 }
 
-.item .contact-link {
+.contact-list .contact-link {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -141,8 +141,8 @@ ul {
   text-decoration: none;
 }
 
-.item .contact-link:hover,
-.item .contact-link:focus {
+.contact-list .contact-link:hover,
+.contact-list .contact-link:focus {
   color: var(--accent-color);
 }
 
