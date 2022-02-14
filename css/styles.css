@@ -398,6 +398,7 @@ ul {
 .project {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .element:not(:nth-child(3n)) {
   margin-right: 30px;
