@@ -61,7 +61,6 @@ ul {
 }
 
 .page-header {
-  background-color: #ccc;
   border-bottom: 1px solid #ececec;
 }
 
@@ -400,12 +399,12 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
 }
-.element:not(:nth-child(3n)) {
-  margin-right: 30px;
+.element:nth-child(3n) {
+  margin-right: 0px;
 }
 
-.element:not(:nth-last-child(-n + 3n)) {
-  margin-bottom: 30px;
+.element:nth-last-child(-n + 3n) {
+  margin-bottom: 0px;
 }
 
 .project .project-link {
@@ -439,7 +438,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.element {
+.project .element {
   calc((100%-90px) /3);
 }
 
