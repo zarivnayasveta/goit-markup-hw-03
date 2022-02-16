@@ -452,9 +452,11 @@ padding-top: 94px;
 
 .element {
   margin-right: 30px;
-  
-}
-
+ }
+ 
+ .element:nth-child(-n + 6)  {
+   margin-bottom: 30px;
+ }
 .project .element {
   calc((100%-90px) /3);
 }
